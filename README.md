@@ -4,7 +4,7 @@
 - display one card ✅
 - style card✅
 
-- Change data, remove goalkeepers add glossary and change all stats to defaults keys, this will allow for scaling easily later
+- Change data, add glossary and change all stats to defaults keys, this will allow for scaling easily later✅
 - get game working in console
 - link game to front end
 - improve front end
