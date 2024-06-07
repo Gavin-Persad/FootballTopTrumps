@@ -81,7 +81,7 @@ const footballPlayerData = [
 			name: 'Luka Modric',
 			facts: {
 				age: 37,
-				country: 'Crostia',
+				country: 'Croatia',
 				position: 'Central Midfielder',
 				club: 'Real Madrid',
 			},
@@ -232,4 +232,4 @@ const footballPlayerData = [
 		},
 	],
 ];
-export default playerData;
+export default footballPlayerData;

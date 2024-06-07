@@ -2,31 +2,31 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './card.module.css'; 
-import playerData from './playerData';
+import footballPlayerData from './playerData';
 
 export default function Card() {
 
-const randomPlayer = Math.floor(Math.random() * playerData.length);
+const randomPlayer = Math.floor(Math.random() * footballPlayerData[1].length);
 
   return(
     <div className={styles.card}>
       <div className={styles.cardImage}>
-        <img src={playerData[randomPlayer].image} alt="player" />
+        <img src={footballPlayerData[1][randomPlayer].image} alt="player" />
       </div>
       <div className={styles.cardContent}>
-        <h2>{playerData[randomPlayer].firstName} {playerData[randomPlayer].lastName}</h2>
-        <p>{playerData[randomPlayer].position}</p>
-        <p>{playerData[randomPlayer].club}</p>
-        <p>{playerData[randomPlayer].country}</p>
-        <p>Rating: {playerData[randomPlayer].rating}</p>
+        <h2>{footballPlayerData[1][randomPlayer].name}</h2>
+        <p>{footballPlayerData[1][randomPlayer].facts.position}</p>
+        <p>{footballPlayerData[1][randomPlayer].facts.club}</p>
+        <p>{footballPlayerData[1][randomPlayer].facts.country}</p>
+        <p>Rating: {footballPlayerData[1][randomPlayer].rating}</p>
         <div className={styles.attributes}>
-          <p>Attacking: {playerData[randomPlayer].attributes.attacking}</p>
-          <p>Defending: {playerData[randomPlayer].attributes.defending}</p>
-          <p>Skill: {playerData[randomPlayer].attributes.skill}</p>
-          <p>Movement: {playerData[randomPlayer].attributes.movement}</p>
-          <p>Power: {playerData[randomPlayer].attributes.power}</p>
-          <p>Mentality: {playerData[randomPlayer].attributes.mentality}</p>
-          <p>Goalkeeping: {playerData[randomPlayer].attributes.goalkeeping}</p>
+          <p> {footballPlayerData[0][0].statTitle1} : {footballPlayerData[1][randomPlayer].attributes.stat1}</p>
+          <p> {footballPlayerData[0][0].statTitle2} : {footballPlayerData[1][randomPlayer].attributes.stat2}</p>
+          <p> {footballPlayerData[0][0].statTitle3} : {footballPlayerData[1][randomPlayer].attributes.stat3}</p>
+          <p> {footballPlayerData[0][0].statTitle4} : {footballPlayerData[1][randomPlayer].attributes.stat4}</p>
+          <p> {footballPlayerData[0][0].statTitle5} : {footballPlayerData[1][randomPlayer].attributes.stat5}</p>
+          <p> {footballPlayerData[0][0].statTitle6} : {footballPlayerData[1][randomPlayer].attributes.stat6}</p>
+          <p> {footballPlayerData[0][0].statTitle7} : {footballPlayerData[1][randomPlayer].attributes.stat7}</p>
         </div>
       </div>
     </div>
