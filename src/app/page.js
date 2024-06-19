@@ -1,5 +1,5 @@
 import styles from './page.module.css';
-import Game from './game/game';
+import Game from './game/game.jsx';
 
 export default function Home() {
 	return (
