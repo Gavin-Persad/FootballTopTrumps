@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './card.module.css'; 
-import footballPlayerData from './playerData';
+import footballPlayerData from '../playerData';
 
 export default function Card() {
 

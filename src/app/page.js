@@ -1,11 +1,11 @@
 import styles from './page.module.css';
-import Card from './card/card';
+import Game from './game/game';
 
 export default function Home() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.description}>
-				<Card />
+				<Game />
 			</div>
 		</main>
 	);
