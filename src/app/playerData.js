@@ -196,7 +196,7 @@ const footballPlayerData = [
 				club: 'Everton',
 			},
 			image:
-				'https://resources.evertonfc.com/photo-resources/2024/03/07/f612bc5e-cb6e-4777-8982-1d1f60b805d5/GettyImages-1860342080.jpg?width=900&height=506',
+				'https://www.footballinsider247.com/static/uploads/1/2023/01/Jordan-Pickford-2023-768x501.jpeg',
 			rating: 82,
 			attributes: {
 				stat1: 19,
