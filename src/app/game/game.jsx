@@ -56,36 +56,43 @@ export default function Game() {
 							{footballPlayerData[0][0].statTitle1} :{' '}
 							{playerCards[0].attributes.stat1}
 						</p>
+						<button>Compare {footballPlayerData[0][0].statTitle2}</button>
 						<p>
 							{' '}
 							{footballPlayerData[0][0].statTitle2} :{' '}
 							{playerCards[0].attributes.stat2}
 						</p>
+						<button>Compare {footballPlayerData[0][0].statTitle2}</button>
 						<p>
 							{' '}
 							{footballPlayerData[0][0].statTitle3} :{' '}
 							{playerCards[0].attributes.stat3}
 						</p>
+						<button>Compare {footballPlayerData[0][0].statTitle3}</button>
 						<p>
 							{' '}
 							{footballPlayerData[0][0].statTitle4} :{' '}
 							{playerCards[0].attributes.stat4}
 						</p>
+						<button>Compare {footballPlayerData[0][0].statTitle4}</button>
 						<p>
 							{' '}
 							{footballPlayerData[0][0].statTitle5} :{' '}
 							{playerCards[0].attributes.stat5}
 						</p>
+						<button>Compare {footballPlayerData[0][0].statTitle5}</button>
 						<p>
 							{' '}
 							{footballPlayerData[0][0].statTitle6} :{' '}
 							{playerCards[0].attributes.stat6}
 						</p>
+						<button>Compare {footballPlayerData[0][0].statTitle6}</button>
 						<p>
 							{' '}
 							{footballPlayerData[0][0].statTitle7} :{' '}
 							{playerCards[0].attributes.stat7}
 						</p>
+						<button>Compare {footballPlayerData[0][0].statTitle7}</button>
 					</div>
 				</div>
 			</div> )}
