@@ -56,7 +56,7 @@ export default function Game() {
 							{footballPlayerData[0][0].statTitle1} :{' '}
 							{playerCards[0].attributes.stat1}
 						</p>
-						<button onClick={handleCompare('stat1')}>Compare {footballPlayerData[0][0].statTitle2}</button>
+						<button onClick={handleCompare('stat1')}>Compare {footballPlayerData[0][0].statTitle1}</button>
 						<p>
 							{' '}
 							{footballPlayerData[0][0].statTitle2} :{' '}
