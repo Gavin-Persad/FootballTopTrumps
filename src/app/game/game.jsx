@@ -101,14 +101,33 @@ export default function Game() {
 	function handleCompare(attribute) {
 		return function() {
 			if (playerCards[0].attributes[attribute] > computerCards[0].attributes[attribute]) {
+				alert(`Player wins! Player had ${playerCards[0].attributes[attribute]} - Computer had ${computerCards[0].attributes[attribute]}`);
 				const playerCard = playerCards.shift();
 				const computerCard = computerCards.shift();
 				setPlayerCards([...playerCards, playerCard, computerCard]);
 			} else {
+				alert(`Computer wins! Player had ${playerCards[0].attributes[attribute]} - Computer had ${computerCards[0].attributes[attribute]}`);
 				const playerCard = playerCards.shift();
 				const computerCard = computerCards.shift();
 				setComputerCards([...computerCards, playerCard, computerCard]);
 			}
+		}
+		if (playerCards.length === 0) {
+			return (
+				<div>
+					<h1>You lose!!! Game Over!!!</h1>
+					<p>Player Cards: {playerCards.length}</p>
+					<p>Computer Cards: {computerCards.length}</p>
+				</div>
+			);
+		}else {
+			return (
+				<div>
+					<h1>You win!!! Game Over!!!</h1>
+					<p>Player Cards: {playerCards.length}</p>
+					<p>Computer Cards: {computerCards.length}</p>
+				</div>
+			);
 		}
 }
 }
