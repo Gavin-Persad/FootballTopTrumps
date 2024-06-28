@@ -7,7 +7,7 @@ import styles from './game.module.css';
 export default function Game() {
 	const [playerCards, setPlayerCards] = useState([]);
 	const [computerCards, setComputerCards] = useState([]);
-	
+	const [gameEnded, setGameEnded] = useState(false);
 
 		useEffect(() => {
 			shuffleAndSelectCards(footballPlayerData);
@@ -30,8 +30,7 @@ export default function Game() {
 			setComputerCards(computer);
 			}
 
-if (playerCards.length > 0 && computerCards.length > 0) {
-
+	if (playerCards.length > 0 && computerCards.length > 0 && !gameEnded) {
 		return (
 			<>
 				<div>
@@ -102,11 +101,15 @@ if (playerCards.length > 0 && computerCards.length > 0) {
 			</>
 		);
 
-	} else if (playerCards.length === 0) {
-		return <h1>Computer wins!</h1>;
-	} else if (computerCards.length === 0) {
-		return <h1>Player wins!</h1>;
+	} else if (gameEnded && playerCards.length === 0) {
+		return (<h1>Computer wins!</h1>);
+	  } else if (gameEnded && computerCards.length === 0) {
+		return (<h1>Player wins!</h1>);
+	  } else {
+		return null;
 	}
+
+
 
 		function handleCompare(attribute) {
 			return function() {
@@ -115,13 +118,13 @@ if (playerCards.length > 0 && computerCards.length > 0) {
 					const playerCard = playerCards.shift();
 					const computerCard = computerCards.shift();
 					setPlayerCards([...playerCards, playerCard, computerCard]);
-				} else {
+					if (computerCards.length === 0) {
+						setGameEnded(true);
+				}} else {
 					alert(`Computer wins! Player had ${playerCards[0].attributes[attribute]} - Computer had ${computerCards[0].attributes[attribute]}`);
 					const playerCard = playerCards.shift();
 					const computerCard = computerCards.shift();
 					setComputerCards([...computerCards, playerCard, computerCard]);
-				}
-			}
-			
-	}
-}
+					if (playerCards.length === 0) {
+						setGameEnded(true);
+				}}}}}
