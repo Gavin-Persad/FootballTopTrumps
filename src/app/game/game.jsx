@@ -38,6 +38,36 @@ export default function Game() {
 					<p>Player Cards: {playerCards.length}</p>
 					<p>Computer Cards: {computerCards.length}</p>
 				</div>
+				<div>
+					<h3>How to play</h3>
+					<p>
+						Setup:
+						You, the player, and the computer each have a stack of cards.
+						These cards have been randomly selected from the deck.
+						Your first card is revealed.
+
+						Choose a Stat:
+						Examine the stats on your card (e.g., Movement, Skill, Power).
+						Select one stat to compare against the computer.
+
+						Stat Comparison:
+						Compare the chosen stat with the corresponding stat on the computer’s card.
+						Whoever has the higher value in that stat wins the round.
+						If the stats are equal, the computer wins.
+
+						Winning the Round:
+						The winner of the round takes both cards (yours and the computer’s).
+						Add these cards to your collection.
+
+						Keep Playing:
+						Repeat steps 2-4 for each round.
+						Continue until one player runs out of cards.
+
+						Victory:
+						The player holding all the cards at the end is the winner!
+						Enjoy the game, and may the best stats prevail! 🃏🎉
+					</p>
+				</div>
 			{playerCards.length > 0 && (
 				<div className={styles.card}>
 					<div className={styles.cardImage}>
